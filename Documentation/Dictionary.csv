@@ -1,43 +1,42 @@
-Field_Name,Description,Expected_Values,Field_Name_Catalan,Field_Name_WashU,Field_Name_CaseWestern,Field_Name_HenryFord,Field_Name_Jefferson,Field_Name_KCL,Field_Name_MDA,Field_Name_NYU,Field_Name_OSU,Field_Name_TMC,Field_Name_UAB,Field_Name_UPMC,Field_Name_TUM,Field_Name_UCSF
-Filename,Name of clinical data file,filename.csv,20210127_Catalan_CBICAmaster.csv,20220418_WashUGBM_ReSPONDmaster.csv,20210422_CW_CBICAmaster.csv,20211221_HF_CBICAmaster.csv,20220512_TJU_ReSPONDmaster.csv,20220317_KCL_ReSPONDmaster.csv,20220310_BraTS_MDA_UAB_WashU_ReSPONDmaster.csv,20210209_NYU_CBICAmaster.csv,20220811_OSU_ReSPONDmaster.csv,20210422_TMC_CBICAmaster.csv,20220310_BraTS_MDA_UAB_WashU_ReSPONDmaster.csv,20220110_UPMC_CBICAmaster.csv,20230529_TUM_ReSPONDmaster.csv,20220422_UCSF_ReSPONDmaster.csv
-Site,Site ID,character,"""Catalan""","""WashU""","""CaseWestern""","""HenryFord""","""Jefferson""","""KCL""","""MDA""","""NYU""","""OSU""","""TMC""","""UAB""","""UPMC""","""TUM""","""UCSF"""
-Dataset,Dataset ID includes processing date and site ID,YYYYMMDD_DatasetName,"""20210127_Catalan""","""20220418_WashUGBM""","""20210422_CW""","""20211221_HF""","""20220512_TJU""","""20220317_KCL""","""20220310_BraTS_MDA_UAB_WashU""","""20210209_NYU""","""20220811_OSU""","""20210422_TMC""","""20220310_BraTS_MDA_UAB_WashU""","""20220110_UPMC""","""20230529_TUM""","""20220422_UCSF"""
-PTID_Original,Original site-specific subject ID,character,Paciente,I3CRID,,,,,,,,,,,,
-PTID,RESPOND project subject ID,character,respond_id,RespondID,,,,,,,,,,,,
-BL_ID,Baseline ID,PTID_YYYY.MM.DD or SubID_d0,baseline_id,PreopID,,,,,,,,,,,,
-RC_ID,Recurrence ID,PTID_YYYY.MM.DD or SubID_dxx,,FollowupID,,,,,,,,,,,,
-BL_MRI_Basic,Availability of 4 basic structural modalities at baseline, (y/n),all_structural,Baseline_allbasic,,,,,,,,,,,,
-BL_MRI_Diff,Availability and type of diffusion imaging at baseline, (ADC/DTI/TR/B0/None), *query, *query,,,,,,,,,,,,
-BL_MRI_Perf,Availability of perfusion imaging at baseline, (y/n), *query, *query,,,,,,,,,,,,
-BL_MRI_ROIs,"Availability of segmented ROIs (passed QC) at baseline, `$PROTOCOLS/6_DeepMedic`", (y/n), *query, *query,,,,,,,,,,,,
-BL_MRI_Date,Date of baseline MR imaging,YYYY.MM.DD or d0,DATA_MRI_PRE_SURG,"""d0000""",,,,,,,,,,,,
-BL_Surg_Date,Date of baseline surgery,YYYY.MM.DD or dxx,DATA_SURG,,,,,,,,,,,,,
-RC_Determination,Recurrence determination, (path/clinical),RELAPSE_PROGRESSION,Recurrence (y),,,,,,,,,,,,
-RC_Progression_Status,Recurrence status, (TP/PsP/None),,,,,,,,,,,,,,
-Near_Far_ROIs,   Do near_far ROI segmentations exist for this subject in /cbica/projects/brain_tumor_external/Projects/20210205_ReSPOND_recurrence/wdir/20210212_ROI/20220826_ROIsFinal - nearROI =$t_Pure and farROI=$t_Infiltrated," (y/n/""baseline diffusion missing""/""excluded from recurrence study"")", *query, *query,,,,,,,,,,,,
-RC_MRI_Basic,Availability of 4 basic structural modalities at recurrence, (y/n), *query, *query,,,,,,,,,,,,
-RC_MRI_Diff,Availability and type of diffusion imaging at recurrence, (ADC/DTI/TR/B0/None), *query, *query,,,,,,,,,,,,
-RC_MRI_Perf,Availability of perfusion imaging at recurrence, (y/n), *query, *query,,,,,,,,,,,,
-RC_MRI_ROIs,   Do rec ROI segmentations exist for this subject in /cbica/projects/brain_tumor_external/Projects/20210205_ReSPOND_recurrence/wdir/20210212_ROI/20220826_ROIsFinal - recROI=$t_RECinED_ROI," (y/n/""no recurrence"")", *query, *query,,,,,,,,,,,,
-RC_MRI_Date,Date of recurrence MR imaging,YYYY.MM.DD or dxx,DATA_PROGRESSION,,,,,,,,,,,,,
-RC_Surg_Date,Date of recurrence surgery,YYYY.MM.DD or dxx,,,,,,,,,,,,,,
-Deceased,Deceased status, (y/n),EXITUS,status,,,,,,,,,,,,
-Survival,"Overall survival if deceased, time until last checkup if alive (days)",numeric,MONTHS_SURG_EXITUS,overall_survival_surgery,,,,,,,,,,,,
-PFS,Progression Free Survival (days),numeric,Data_progressio,days to progression/recurrance,,,,,,,,,,,,
-Age,Age (years),numeric,Age_diagnosis,age at diagnosis,,,,,,,,,,,,
-Sex,Sex, (M/F),SEX,Gender,,,,,,,,,,,,
-Race,Race, (White/Black/etc.), ,Race,,,,,,,,,,,,
-Ethnicity,Hispanic, (Hispanic/Not Hispanic), ,Ethnicity,,,,,,,,,,,,
-EOR,Extent of Resection (categorical),0= biopsy; 1= subtotal; 2= near-total (>90%); 3= gross-total (>95%); 4= supra-total,RESECTION,EOR_respond,,,,,,,,,,,,
-KPS,Karnofsky Performance Scale,numeric,KARNOFSKY,,,,,,,,,,,,,
-Radiation_Dose,Dose of radiation (Gy),numeric, ,,,,,,,,,,,,,
-TMZ_Concurrent,Concurrent temozolomide treatment, (y/n),TMZ_CONCO_COMPLETe,,,,,,,,,,,,,
-TMZ_Adjuvant,Adjuvant temozolomide treatment, (y/n),NUMBER_TMZ_ADJ_CYCLES,Has the patient received post-operative adjuvant chemotherapy or hormonal therapy?,,,,,,,,,,,,
-Chemo_Other,Other chemotherapy i.e. not temozolomide,free text, (TYPE_TREAT_RELAPSE),type(s) of chemotherapy/hormonal therapy the patient received (postsurgical),,,,,,,,,,,,
-IDH1,IDH1 mutation status,0= Wildtype; 1= Mutant; 2= NOS/NEC; 8 = not tested, ,IDH1_respond,,,,,,,,,,,,
-MGMT,MGMT methylation status,0= Unmethylated; 1= Methylated; 2= Indeterminate; 8 = not tested,MGMT_STATUS,MGMT_respond,,,,,,,,,,,,
-codel_1p19q,1p19q co-deletion status,0= negative/1p19q intact; 1= positive/co-deleted; 2= indeterminate; 8 = not tested, ,1p19q,,,,,,,,,,,,
-EGFR,EGFR amplification status,0= negative; 1= positive; 2= indeterminate; 8 = not tested, ,EGFR,,,,,,,,,,,,
-EGFRvIII,EGFRvIII mutation status,0= negative; 1= positive; 2= indeterminate; 8 = not tested, ,,,,,,,,,,,,,
-Exclude,Exclusion flag," (Exclude/ """")",,,,,,,,,,,,,,
-Notes,"Notes e.g. reason for exclusion, need for review, unusual characteristics",free text,,,,,,,,,,,,,,
+Field_Name,Description,Expected_Values
+Site,Site ID,character
+Dataset,Dataset ID includes processing date and site ID,YYYYMMDD_DatasetName
+PTID_Original,Original site-specific subject ID,character
+PTID,RESPOND project subject ID,character
+BL_ID,Baseline ID,PTID_YYYY.MM.DD or SubID_d0
+RC_ID,Recurrence ID,PTID_YYYY.MM.DD or SubID_dxx
+BL_MRI_Basic,Availability of 4 basic structural modalities at baseline, (y/n)
+BL_MRI_Diff,Availability and type of diffusion imaging at baseline, (ADC/DTI/TR/B0/None)
+BL_MRI_Perf,Availability of perfusion imaging at baseline, (y/n)
+BL_MRI_ROIs,"Availability of segmented ROIs (passed QC) at baseline, `$PROTOCOLS/6_DeepMedic`", (y/n)
+BL_MRI_Date,Date of baseline MR imaging,YYYY.MM.DD or d0
+BL_Surg_Date,Date of baseline surgery,YYYY.MM.DD or dxx
+RC_Determination,Recurrence determination, (path/clinical)
+RC_Progression_Status,Recurrence status, (TP/PsP/None)
+Near_Far_ROIs,   Do near_far ROI segmentations exist for this subject in /cbica/projects/brain_tumor_external/Projects/20210205_ReSPOND_recurrence/wdir/20210212_ROI/20220826_ROIsFinal - nearROI =$t_Pure and farROI=$t_Infiltrated," (y/n/""baseline diffusion missing""/""excluded from recurrence study"")"
+RC_MRI_Basic,Availability of 4 basic structural modalities at recurrence, (y/n)
+RC_MRI_Diff,Availability and type of diffusion imaging at recurrence, (ADC/DTI/TR/B0/None)
+RC_MRI_Perf,Availability of perfusion imaging at recurrence, (y/n)
+RC_MRI_ROIs,   Do rec ROI segmentations exist for this subject in /cbica/projects/brain_tumor_external/Projects/20210205_ReSPOND_recurrence/wdir/20210212_ROI/20220826_ROIsFinal - recROI=$t_RECinED_ROI," (y/n/""no recurrence"")"
+RC_MRI_Date,Date of recurrence MR imaging,YYYY.MM.DD or dxx
+RC_Surg_Date,Date of recurrence surgery,YYYY.MM.DD or dxx
+Deceased,Deceased status, (y/n)
+Survival,"Overall survival if deceased, time until last checkup if alive (days)",numeric
+PFS,Progression Free Survival (days),numeric
+Age,Age (years),numeric
+Sex,Sex, (M/F)
+Race,Race, (White/Black/etc.)
+Ethnicity,Hispanic, (Hispanic/Not Hispanic)
+EOR,Extent of Resection (categorical),0= biopsy; 1= subtotal; 2= near-total (>90%); 3= gross-total (>95%); 4= supra-total
+KPS,Karnofsky Performance Scale,numeric
+Radiation_Dose,Dose of radiation (Gy),numeric
+TMZ_Concurrent,Concurrent temozolomide treatment, (y/n)
+TMZ_Adjuvant,Adjuvant temozolomide treatment, (y/n)
+Chemo_Other,Other chemotherapy i.e. not temozolomide,free text
+IDH1,IDH1 mutation status,0= Wildtype; 1= Mutant; 2= NOS/NEC; 8 = not tested
+MGMT,MGMT methylation status,0= Unmethylated; 1= Methylated; 2= Indeterminate; 8 = not tested
+codel_1p19q,1p19q co-deletion status,0= negative/1p19q intact; 1= positive/co-deleted; 2= indeterminate; 8 = not tested
+EGFR,EGFR amplification status,0= negative; 1= positive; 2= indeterminate; 8 = not tested
+EGFRvIII,EGFRvIII mutation status,0= negative; 1= positive; 2= indeterminate; 8 = not tested
+Exclude,Exclusion flag," (Exclude/ """")"
+Notes,"Notes e.g. reason for exclusion, need for review, unusual characteristics",free text
